@@ -7,6 +7,7 @@
     // }
     $pag = @$_GET['pag'];
     $menu1 = "agenda";
+    $menu2 = "produtos";
    
 ?>
 <!DOCTYPE html>
@@ -43,6 +44,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?pag=<?php echo $menu1; ?>">Agenda</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?pag=<?php echo $menu2; ?>">Produtos</a>
+                </li>
                 
             </ul>
             <div>
@@ -58,7 +62,9 @@
                     include_once("home.php");
                 }else if($pag == $menu1){
                     include_once($menu1 . ".php");
-                }else{
+                 } else if($pag == $menu2){
+                    include_once($menu2 . ".php");
+                 }else{
                     include_once("home.php");
                 }
             ?>
